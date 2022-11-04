@@ -1,26 +1,27 @@
 import styles from '../styles/Home.module.css'
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"
 import { Col, Container, Form, FormGroup, Input, Label, Row, Button } from "reactstrap";
 import { useState } from 'react';
 
 import Header from '../components/Header'
 
-export default function Login() {
+
+export default function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const doLogin = () => {
+  const doRegister = () => {
     const auth = getAuth();
 
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        alert( 'ログインok!' );
-        console.log( user );
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      alert( '登録完了！' );
+      console.log( user );
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   }
 
   return (
@@ -55,15 +56,17 @@ export default function Login() {
                 style={{ width: 220 }}
                 color="primary"
                 onClick={()=>{
-                  doLogin();
+                  doRegister();
                 }}
               >
-              ログイン
+              登録
             </Button>
         </Form>
       </div>
     </div>
   )
 }
+
+
 
 
