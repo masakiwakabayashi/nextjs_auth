@@ -16,7 +16,7 @@ export default function Register() {
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user;
-      alert( '登録完了！' );
+      // alert( '登録完了！' );
       console.log( user );
     })
     .catch((error) => {
@@ -26,7 +26,7 @@ export default function Register() {
 
   return (
     <div className={styles.container}>
-      <h1>クローラー</h1>
+      <h1>新規登録</h1>
       <Header/>
       <div>
         <Form>

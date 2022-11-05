@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div style={{ padding: "1rem 0" }} >
       { currentUser ? (
-        <div suppressHydrationWarning={true}>ログインしています。</div>
+        <div suppressHydrationWarning={true}>{ currentUser.email } でログインしています。</div>
       ):(
         <div suppressHydrationWarning={true}>ログインしていません。</div>
       )}

@@ -15,7 +15,7 @@ export default function Login() {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        alert( 'ログインok!' );
+        // alert( 'ログインOK！' );
         console.log( user );
       })
       .catch((error) => {
@@ -25,7 +25,7 @@ export default function Login() {
 
   return (
     <div className={styles.container}>
-      <h1>クローラー</h1>
+      <h1>ログイン</h1>
       <Header/>
       <div>
         <Form>
