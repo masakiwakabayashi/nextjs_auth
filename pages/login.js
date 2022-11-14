@@ -4,6 +4,7 @@ import { Col, Container, Form, FormGroup, Input, Label, Row, Button } from "reac
 import { useState } from 'react';
 
 import Header from '../components/Header'
+import Link from 'next/link';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -62,6 +63,10 @@ export default function Login() {
             </Button>
         </Form>
       </div>
+      <Link
+        href="/forgot_password">
+        <a style={{ paddingTop: "1rem" }}>パスワードを忘れた場合</a>
+      </Link>
     </div>
   )
 }

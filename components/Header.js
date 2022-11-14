@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext'
 
 const Header = () => {
   const { currentUser } = useAuth();
-  console.log(currentUser);
+  // console.log(currentUser);
 
   return (
     <div style={{ padding: "1rem 0" }} >
