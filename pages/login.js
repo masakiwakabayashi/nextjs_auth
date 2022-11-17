@@ -28,7 +28,7 @@ export default function Login() {
     <div className={styles.container}>
       <h1>ログイン</h1>
       <Header/>
-      <div>
+      <div style={{ paddingBottom: "1rem" }}>
         <Form>
             <FormGroup>
               <Label>
@@ -65,7 +65,7 @@ export default function Login() {
       </div>
       <Link
         href="/forgot_password">
-        <a style={{ paddingTop: "1rem" }}>パスワードを忘れた場合</a>
+        <a>パスワードを忘れた場合</a>
       </Link>
     </div>
   )
